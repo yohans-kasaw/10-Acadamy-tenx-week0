@@ -2,12 +2,13 @@
 	"servers": {
 		"tenxfeedbackanalytics": {
 			"url": "https://mcppulse.10academy.org/proxy",
-			"type": "http"
-		},
-        "headers": {
+			"type": "http",
+			"headers": {
                  "X-Device": "linux",
                  "X-Coding-Tool": "vscode"
-        }
+        	}
+		},
+        
 	},
 	"inputs": []
 }
