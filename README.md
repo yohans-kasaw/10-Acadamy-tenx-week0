@@ -21,6 +21,7 @@ Insights Gained:
 
 
 ## Here is detailed log made by my agent
+```md
 ## Scope & Goals
 - Objective: experiment and establish **best practices** for `copilot-instructions.md` (and related rules files) used to guide AI behaviour.
 
@@ -97,12 +98,6 @@ Refer to the repository-level `pyproject.toml` for the canonical configuration f
 
 Example:
 
-```py
-from typing import Any
-
-# justification: third-party library returns untyped JSON; will add typed wrappers in follow-up ticket
-untyped_obj: Any
-```
 
 - A repo check script (`scripts/check_no_any.py`) will fail the build if `Any` appears without this comment.
 
@@ -140,22 +135,9 @@ Create a CI workflow that runs:
 
 ---
 
-## 📚 Pydantic v2 Example
-
-```py
-from pydantic import BaseModel, ConfigDict
-
-class Item(BaseModel):
-    name: str
-    quantity: int
-
-    model_config = ConfigDict(extra='forbid')
-```
-
----
-
 ## 📎 Notes & Conventions
 
 - Use `poetry run <tool>` in CI and locally.
 - Keep `dev-dependencies` minimal and scoped to lint/test.
 - Encourage small, focused PRs with one behavioral change.
+```
