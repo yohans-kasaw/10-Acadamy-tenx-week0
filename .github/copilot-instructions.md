@@ -97,6 +97,3 @@ class Item(BaseModel):
 - Keep `dev-dependencies` minimal and scoped to lint/test.
 - Encourage small, focused PRs with one behavioral change.
 
----
-
-If you want, I can also generate a sample `pyproject.toml` and a CI workflow to enforce all checks. 🙌
