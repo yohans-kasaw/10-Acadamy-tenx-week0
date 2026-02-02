@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "week0"
+version = "0.0.0"
+description = "Strictly-typed, test-driven project scaffold"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4"
+pytest-asyncio = "^0.21"
+pytest-cov = "^4.0"
+mypy = "^1.10"
+ruff = "^0.26"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+no_implicit_optional = true
+disallow_untyped_defs = true
+disallow_any_expr = true
+disallow_any_unimported = true
+disallow_any_decorated = true
+warn_unused_ignores = true
+warn_return_any = true
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C", "I"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--strict-markers --cov=./ --cov-report=term-missing"
+python_files = ["test_*.py"]
